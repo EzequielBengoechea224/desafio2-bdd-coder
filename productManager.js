@@ -43,9 +43,10 @@ class ProductManager {
             console.error(error);
         }
     }
-
+    //Busco productos basandome en su id y los muestro
     async getProductById(id) {
         try {
+            console.log("Buscando por ID");
             this.products = await this.getProducts();
             let prodEncontrado = this.products.find((prod) => prod.id === id);
             if (prodEncontrado) {
@@ -57,7 +58,7 @@ class ProductManager {
             console.error(error);
         }
     }
-
+    //Metodo para modificar un producto Basandose en su ID
     async updateProduct(id, valor) {
         try {
             let productos = await fs.promises.readFile(this.path, "utf-8");
@@ -115,6 +116,11 @@ const main = async () => {
     //Muestro los productos cargados
     let prod = await productos.getProducts();
     console.log(prod);
+
+    //Busco producto por id
+
+    let ProdID = await productos.getProductById(2);
+    console.log(ProdID);
 
     //Modifico los productos
     const valor = {
