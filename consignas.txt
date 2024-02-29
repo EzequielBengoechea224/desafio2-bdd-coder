@@ -1,0 +1,21 @@
+//Realizar class ProductManager
+/* 
+que permite trabajar con multiples prod
+debe poder:
+    -agregar
+    -consultar
+    -modificar
+    -eliminar
+    -y manejarlo en persistencia de archivos
+
+la clase debe contar con una variable this.path que contenga la ruta a trabajar desde el momento de generar la instancia
+
+debe guardar objetos con el sig formato :
+    id(debe incrementarse automaticamente)
+    title(nombre del prod)
+    description(desc del prod)
+    price(precio)
+    thumbnail(ruta de la imagen)
+    code(codigo identificador)
+    stock(nro de piezas disponibles)
+*/
